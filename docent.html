@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docent Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <img src="images/aventus-logo.png" alt="Company Logo" class="logo">
+            <h1>DOCENT</h1>
+            <h3>[Docent Naam]</h3>
+            <p>Deze pagina geeft je de info die over de studenten onder jouw begeleiding.</p>
+        </header>
+        <div class="content">
+            <section class="section">
+                <h3>Opdrachten Beoordelen</h3> <br>
+                <div class="card">
+                    <img src="images/profile.jpg" alt="Profile Picture">
+                    <p>Jacob Deenstra<br><button>Beoordelen</button> </p>
+                </div>
+            </section>
+            <section class="section">
+            </section>
+        </div>
+        <div>
+            <section class="section">
+                <h3>Studenten</h3> <br>
+                <div class="card">
+                    <img src="images/profile.jpg" alt="Profile Picture">
+                    <p>Jacob Deenstra</p>
+                </div>
+            <br>
+        </div>
+        <div class="slecht">
+            <section class="section">
+                <h3>Achterliggers</h3> <br>
+                <div class="card">
+                    <img src="images/profile.jpg" alt="Profile Picture">
+                    <p>Jacob Deenstra<br>Mist 10 uren</p>
+                </div>
+            <br>
+        </div>
+        <div>
+            <section class="section">
+                <h3>Studenten Uren</h3> <br>
+                <canvas id="urenChart" style="width: 75%; height: 75%; display: block; margin: 0 auto;"></canvas>
+            </section>
+            
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('urenChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Student A', 'Student B', 'Student C', 'Student D'],
+                        datasets: [{
+                            label: 'Uren',
+                            data: [10, 8, 12, 5],
+                            backgroundColor: ['#E8C4A2', '#E8C4A2', '#E8C4A2', '#E8C4A2'],
+                            borderColor: '#000',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>            
+        </div>
+    </div>
+    <div style="height: 200px;"></div>
+</body>
+</html>

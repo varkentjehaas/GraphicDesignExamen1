@@ -1,0 +1,243 @@
+/* General styles */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+    padding: 10px;
+}
+
+.page {
+    aspect-ratio: 1 / 1.2; /* Slightly wider than A4 proportions */
+    width: 100%;
+    max-width: 900px; /* Wider maximum width */
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: auto; /* Center the page */
+}
+
+header {
+    background-color: #00a6d6;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    position: relative;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.page h1 {
+    font-size: 260z%;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', BebasNeue;
+}
+
+.page h2 {
+    font-size: 1.5em;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.page h3 {
+    text-align: left;
+}
+
+.page p {
+    text-align: left;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #CE6452;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section {
+    flex: 1;
+}
+
+.section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd; /* Border for the card */
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+.card img {
+    border-radius: 50%; /* Make the image circular */
+    width: 50px; /* Set a fixed width for the image */
+    height: 50px; /* Set a fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    border: 2px solid #ddd; /* Optional: Add a border around the image */
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.uren-bar {
+    background-color: #00a6d6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uren-bar-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.uren-bar {
+    height: 70%;
+    border-radius: 0 0 10px 10px;
+}
+
+.slecht {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #A252EC;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .page {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+@media print {
+    .page {
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.logo {
+    width: 100px; /* Default size for mobile */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .logo {
+        width: 150px; /* Adjust size for tablets and larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        width: 200px; /* Adjust size for desktops */
+    }
+}
+
+body {
+    background-image: url('images/achtergrond.jpg'); /* Replace with your image path */
+    background-size: cover; /* This makes the image cover the entire background */
+    background-position: center; /* This centers the image */
+}
+
+button {
+    background-color: #7ECE52;
+    border: none;
+    color: white;
+    padding: 2% 5% ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    border-radius: 10%;
+}
+button:hover {background-color: #3e8e41}
+.blue button {
+    background-color: #00a6d6;
+    border: none;
+    color: white;
+    padding: 2% 5% ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 130%;
+    border-radius: 10%;
+}
+
+.blue button:hover {background-color: #00a6d6}
+
+.button-class {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
